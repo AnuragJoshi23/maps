@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location-Based Access</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function checkLocation() {
+            let location = prompt("Please enter your location (e.g., Punjab, Haryana, Chandigarh):");
+            location = location.trim().toLowerCase();
+
+            if (['punjab', 'haryana', 'chandigarh'].includes(location)) {
+                checkCredentials();
+            } else {
+                alert("Access Denied");
+            }
+        }
+
+        function checkCredentials() {
+            let username = prompt("Please enter your username:");
+            let password = prompt("Please enter your password:");
+
+            const validUsername = "anurag";
+            const validPassword = "password123";
+
+            if (username === validUsername && password === validPassword) {
+                window.location.href = "https://maps.app.goo.gl/jQkJJVyEN4SYPw4a8"; 
+            } 
+            
+            else if (username === validUsername && password === validPassword) {
+                window.location.href = "https://maps.app.goo.gl/LaX1wKgW15ftwtGN9"; 
+            }
+            
+            else if (username === validUsername && password === validPassword) {
+                    window.location.href = "https://maps.app.goo.gl/opyzKmTZFTrh5K2x9"; 
+            }
+
+            else {
+                alert("Wrong credentials");
+            }
+        }
+
+        window.onload = checkLocation;
+
+    </script>
+
+</body>
+</html>
